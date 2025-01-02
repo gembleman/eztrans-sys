@@ -1,0 +1,43 @@
+[package]
+name = "eztrans-sys"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "FFI bindings for ChangShinSoft's Eztrans"
+
+
+[features]
+default = [
+    "free-mem",
+    "initialize-ex",
+    "terminate",
+    "translate-mmnt",
+    "translate-mmntw",
+]
+
+free-mem = []
+get-prior-dict = []
+get-property = []
+initialize = []
+initialize-ex = []
+reload-user-dict = []
+set-del-jpn = []
+set-field = []
+set-hnj2han = []
+set-jwin = []
+set-prior-dict = []
+set-property = []
+stop-translation = []
+terminate = []
+translate-chat = []
+translate-fm = []
+translate-mm = []
+translate-mmex = []
+translate-mmnt = []
+translate-mmntw = []
+
+[dependencies]
+libloading = "0.8"
+thiserror = { workspace = true }
+encoding_rs = "0.8"
+windows_shared_memory = { path = "../windows_shared_memory" }
